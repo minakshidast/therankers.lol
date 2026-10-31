@@ -1,0 +1,7 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { title: "Privacy" };
+
+export default function PrivacyPage() {
+  return <article className="mx-auto max-w-3xl px-5 py-14 leading-relaxed"><p className="text-xs font-black uppercase tracking-[.2em] text-muted">Last updated October 2026</p><h1 className="mt-2 font-display text-4xl uppercase">Privacy policy</h1><div className="mt-7 space-y-5"><p>We collect the listing name, URL, description, category, email, bid, payment method, payment reference, and basic click counts that you submit. Approved listing details, confirmed amount, and click count are public. Email and payment details are private and available only to the site administrator for review and operation.</p><p>We use request IP addresses transiently to enforce submission and administrator-login rate limits. The application stores a one-way hash for this purpose; it is not shown publicly. Hosting and database providers may process connection and diagnostic data under their own privacy terms.</p><p>We use submitted contact details to administer your listing. Status updates are not automated; contact support if you need an update. We do not sell personal information. Contact the site operator to request correction or deletion, subject to legal and operational requirements.</p><p>Data is retained as needed to operate the service, prevent abuse, and meet legal obligations. Public listing content may remain in backups or cached copies after removal.</p></div></article>;
+}
