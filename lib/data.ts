@@ -6,9 +6,8 @@ import { getAdminDb } from "@/lib/supabase-admin";
 function getPublicDbConfig(): { url: string; key: string } | null {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-  if (url && key) {
-    return { url, key };
-  }
+  if (!url) return null;
+  if (key) return { url, key };
   throw new Error(
     "Supabase configuration is incomplete. Set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY in your environment variables."
   );
