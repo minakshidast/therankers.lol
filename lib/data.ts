@@ -7,7 +7,7 @@ function getPublicDbConfig(): { url: string; key: string } | null {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
   if (url && key) return { url, key };
-  if (process.env.NODE_ENV !== "production" && !url && !key) return null;
+  if (process.env.NODE_ENV !== "production" && !url) return null;
   throw new Error("Supabase public configuration is incomplete. Set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY.");
 }
 
